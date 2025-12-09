@@ -1,0 +1,702 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+:root{
+    --header-height: 17.7vh;
+    /* Main colors */
+    --main-color-font: #FFFFFF;
+    --main-bckg-color: #000104;
+    --secundary-bckg-color: #001A52;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--main-color-font);
+    background: var(--main-bckg-color);
+    background: linear-gradient(90deg,var(--main-bckg-color) 0%, var(--secundary-bckg-color) 100%);
+}
+
+.hidden{
+    display: none !important;
+}
+
+/* Common height of every section containers */
+section{
+    height: 100vh;
+    display: flex;
+    padding-top: calc(var(--header-height) + 3rem);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+/* Common styles of img div's */
+.home-img,
+#about-us .about-us-img,
+#skills-img-01,
+#skills-img-02,
+#skills-img-03,
+#skills-img-04,
+.contact-container
+{
+    border: 1.2rem solid #C1C1C1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 28rem;
+    height: 28rem;
+    background-size: 137%;
+    background-position: 56% 10%;
+    background-origin: content-box;
+}
+
+/* Header, Footer, nav */
+header, footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #07192A;
+    color: #FFFFFF;
+    height: var(--header-height);
+    padding: 2.8rem;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    background: linear-gradient(90deg,#07192A 0%, #0E3E83 100%);
+    z-index: 1000;
+}
+
+footer{
+    background: linear-gradient(90deg,#0E3E83 0%, #07192A 100%);
+}
+
+.logo-header, .logo-footer{
+    display: flex;
+    gap: 1rem;
+}
+
+.logo-header{
+    align-items: center;
+}
+
+.logo-header img{
+    height: 8rem;
+}
+
+.logo-footer img{
+    width: 1.625rem;
+    height: 2.21rem;
+}
+
+.logo-header p{
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2.7rem;
+    width: 9.7rem;
+}
+
+.logo-footer p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.1rem;
+    width: 6.305rem;
+}
+
+.content-footer p{
+    width: 14rem;
+    line-height: 1.2rem;
+}
+
+nav{
+    width: 100%;
+    height: 5.8rem;
+    display: none;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav ul li, .mobile-menu-content ul li{
+    list-style: none;
+    font-size: 2rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    border: 0.3rem solid transparent;
+    transition: border 0.6s ease-in-out;
+}
+
+nav ul li:hover{
+    border: 0.3rem solid #546A85;
+}
+
+/* Mobile menu */
+.mobile-menu-icon{
+    font-size: 3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: flex;
+    position: relative;
+}
+
+.mobile-menu-content{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    background-color: #546A85;
+    width: 22rem;
+    display: none;
+}
+
+/* Show menu on hover (desktop) or when .open is present (touch/click) */
+.mobile-menu:hover .mobile-menu-content{
+    display: block;
+}
+
+.mobile-menu-content ul li{
+    transition: background-color 0.4s ease-in-out;
+    border-radius: 0;
+}
+
+.mobile-menu-content ul li:hover{
+    background-color: #1D3358;
+}
+
+
+/* Common container for every section */
+.section-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+
+/* Section Home */
+.home-img{
+    background-image: url('../img/psychologist-group01.png');
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.home-content h1{
+    font-size: 4rem;
+    width: 19.1rem;
+    line-height: 3.8rem;
+}
+
+.home-content p{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: justify;
+}
+
+.home-content ul li{
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+/* H1 styles of some sections */
+#about-us .section-main-container h1,
+#skills .section-main-container h1,
+#key-differentiators .section-main-container h1
+{
+    font-size: 2.8rem;
+}
+
+/* About-us section */
+.about-us-img{
+    background-image: url('../img/clinic01.png');
+}
+
+#about-us .section-main-container p{
+    font-size: 1.8rem;
+    line-height: 2.0rem;
+    text-align: justify;
+}
+
+/* Skills section */
+#skills{
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+#skills .section-main-container{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "title title"
+        "fig1 fig2"
+        "fig3 fig4"
+        "text-list text-list"
+    ;
+    row-gap: 2rem;
+    height: 60rem;
+}
+
+#skills .section-main-container h1{
+    grid-area: title;
+    justify-self: center;
+}
+
+#skills-img-01{
+    grid-area: fig1;
+    background-image: url('../img/people01.png');
+    width: 14rem;
+    height: 14rem;
+}
+
+#skills-img-02{
+    grid-area: fig2;
+    background-image: url('../img/people02.png');
+    width: 14rem;
+    height: 14rem;
+}
+
+#skills-img-03{
+    grid-area: fig3;
+    background-image: url('../img/people03.png');
+    width: 14rem;
+    height: 14rem;
+}
+
+#skills-img-04{
+    grid-area: fig4;
+    background-image: url('../img/people04.png');
+    width: 14rem;
+    height: 14rem;
+}
+
+#skills-img-01,
+#skills-img-02,
+#skills-img-03,
+#skills-img-04{
+    border-width: 0.6rem;
+    background-size: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#skills-img-01:hover,
+#skills-img-02:hover,
+#skills-img-03:hover,
+#skills-img-04:hover{
+    transform: scale(1.1);
+}
+
+.skills-list{
+    grid-area: text-list;
+    margin-left: 2rem;
+}
+
+.skills-list li{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+/* Key Differentiators section */
+.key-differentiators-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.key-differentiator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 3.2rem;
+    background-color: #1D3358;
+    width: 34rem;
+    height: 12rem;
+    padding: 3rem 1.4rem;
+    border-radius: 5rem 0 5rem 0;
+    font-size: 1.8rem;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.key-differentiator:hover{
+    transform: scale(1.1);
+}
+
+
+/* Contact section */
+#contact{
+    height: calc(100vh - 2 * var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+#contact .section-main-container{
+    height: 40rem;
+    gap: 2rem;
+}
+
+#contact .section-main-container h1{
+    padding-bottom: 1rem;
+}
+
+.contact-container{
+    width: 27rem;
+    height: 22.7rem;
+    background-image: url('../img/note.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container:hover{
+    transform: scale(1.1);
+}
+
+.contact-content{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+.contact-text{
+    font-family: 'Playpen Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem 0.8rem;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.brands-logos{
+    display: flex;
+    justify-content: center;
+}
+
+.brands-logos img{
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+
+/* Responsivity */
+@media screen and (min-width: 576px){
+    .home-content{
+        width: 85%;
+    }
+
+    #about-us .section-main-container h1{
+        font-size: 4rem;
+    }
+
+    #skills-img-01,
+    #skills-img-02,
+    #skills-img-03,
+    #skills-img-04{
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .key-differentiator{
+        line-height: 2.5rem;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    /* Home section */
+    /* #home .section-main-container{
+        margin-top: 12rem;
+    } */
+
+    .home-img,
+    .about-us-img{
+        width: 35rem;
+        height: 35rem;
+    }
+
+    /* Skills section */
+    #skills-img-01,
+    #skills-img-02,
+    #skills-img-03,
+    #skills-img-04{
+        width: 21.5rem;
+        height: 21.5rem;
+    }
+
+    /* Key Differentiators section */
+    .key-differentiators-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 2rem;
+    }
+
+    .key-differentiator:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .key-differentiator:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .key-differentiator:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    /* Contact section */
+    #contact .section-main-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5rem;
+        height: 35rem;
+    }
+
+    #contact .section-main-container h1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        font-size: 2.8rem;
+    }
+
+    #contact .section-main-container .contact-container:nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #contact .section-main-container .contact-container:nth-child(3){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    nav{
+        display: block;
+    }
+
+    .mobile-menu-icon{
+        display: none;
+    }
+
+    #home .section-main-container{
+        flex-direction: row;
+    }
+
+    /* Home section */
+    .home-img{
+        width: 44rem;
+        height: 44rem;
+    }
+
+    .home-content{
+        width: 50rem;
+    }
+
+    .home-content h1{
+        font-size: 8.5rem;
+        line-height: 7.6rem;
+    }
+
+    .home-content p{
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+
+    .home-content ul li{
+        font-size: 2rem;
+    }
+
+    /* About-us section */
+    #about-us{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-us .section-main-container{
+        max-width: 110rem;
+        max-height: 41rem;
+        display: grid;
+        row-gap: 4rem;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "title fig"
+            "p1 fig"
+            "p2 fig"
+            ;
+        #about-us-title{
+            grid-area: title;
+        }
+    
+        .about-us-img{
+            grid-area: fig;
+            justify-self: flex-end;
+        }
+
+        #about-us-p1{
+            grid-area: p1
+        }
+
+        #about-us-p2{
+            grid-area: p2
+        }
+
+        #about-us-p1, #about-us-p2{
+            line-height: 3.4rem;
+        }
+    }
+
+    /* Skills section */
+    #skills .section-main-container{
+        /* padding-top: 12rem; */
+        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 100rem;
+        height: 45rem;
+        align-items: flex-start;
+        row-gap: 2rem;
+        column-gap: 4rem;
+    }
+
+    #skills .section-main-container h1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: flex-start;
+        font-size: 2.8rem;
+    }
+
+    .skills-list{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        justify-self: flex-start;
+    }
+    
+    .skills-list li{
+        font-size: 2rem;
+        line-height: 3.4rem;
+    }
+
+    #skills-img-01{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #skills-img-02{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #skills-img-03{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+
+    #skills-img-04{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+
+    /* Key differentiators section */
+    .key-differentiators-content{
+        max-width: 90rem;
+    }
+
+    /* Contact section */
+    #contact{
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact .section-main-container{
+        width: 76rem;
+        column-gap: 14rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    nav{
+        width: 92.6rem;
+    }
+
+    #home .section-main-container{
+        justify-content: space-between;
+        gap: 11.4rem;
+        /* padding-top: 5rem; */
+    }
+
+    /* Skills section */
+    #skills .section-main-container{
+        width: auto;
+        max-width: 100rem;
+    }
+}
