@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'BetterTogether'; /* Dê um nome de sua escolha para a fonte */
-    src: url('../fonts/Better\ Together\ Script.woff2') format('woff2');
-         /* url('../fonts/better-together.woff') format('woff'); */
-    /* Adicione outros formatos se necessário para navegadores muito antigos */
-    font-weight: normal;
-    font-style: normal;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -19,23 +10,29 @@ a{
 }
 
 :root{
-    --header-height: 17.7vh;
+    --header-height: 13.6rem;
+    
     /* Main colors */
-    --main-color-font: #FFFFFF;
-    --main-bckg-color: #000104;
-    --secundary-bckg-color: #001A52;
+    --dark-tone: #9A7757;
+    --medium-tone: #E0CFB5;
+    --light-tone: #E6DAC8;
+    --lightness-tone: #FFFFFF;
+
+    /* Border colors */
+    --dark-border: #9A7757;
+    --light-border: #C1C1C1;
 }
 
 html{
     font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
 body{
-    color: var(--main-color-font);
-    background: var(--main-bckg-color);
-    background: linear-gradient(90deg,var(--main-bckg-color) 0%, var(--secundary-bckg-color) 100%);
+    color: var(--dark-tone);
+    background-color: var(--light-tone);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.8rem;
 }
 
 .hidden{
@@ -44,14 +41,32 @@ body{
 
 /* Common height of every section containers */
 section{
-    height: 100vh;
+    min-height: 100dvh;
     display: flex;
-    padding-top: calc(var(--header-height) + 3rem);
+    padding-top: calc(var(--header-height) + 5rem);
+    padding-bottom: 1rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5rem;
     padding-right: 5rem;
+}
+
+/* Home section */
+
+#home{
+    background-color: var(--light-tone)
+}
+
+.home-tit-container img{
+    width: 20.8rem;
+    height: 7.8rem;
+}
+
+.home-tit-container div{
+    font-size: 1.35rem;
+    font-weight: bold;
+    line-height: 2rem;
 }
 
 /* Common styles of img div's */
@@ -63,7 +78,7 @@ section{
 #skills-img-04,
 .contact-container
 {
-    border: 1.2rem solid #C1C1C1;
+    border: 0.8rem solid var(--dark-border);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +105,7 @@ header, footer{
 header{
     position: fixed;
     top: 0;
-    background: linear-gradient(90deg,#07192A 0%, #0E3E83 100%);
+    background: linear-gradient(90deg,var(--dark-tone) 0%, var(--medium-tone) 85%);
     z-index: 1000;
 }
 
@@ -439,28 +454,22 @@ nav ul li:hover{
 
 
 /* Responsivity */
-@media screen and (min-width: 576px){
-    .home-content{
-        width: 85%;
+/* @media screen and (max-width: 375px) and (max-height: 667px){
+    header{
+        height: calc(var(--header-height) - 22px);
     }
 
-    #about-us .section-main-container h1{
-        font-size: 4rem;
+    #home{
+        justify-content: flex-start;
+        padding-top: var(--header-height);
     }
 
-    #skills-img-01,
-    #skills-img-02,
-    #skills-img-03,
-    #skills-img-04{
-        width: 18rem;
-        height: 18rem;
+    .home-img{
+        width: 22rem;
+        height: 22rem;
     }
+} */
 
-    .key-differentiator{
-        line-height: 2.5rem;
-    }
-
-}
 
 @media screen and (min-width: 768px){
     /* Home section */
