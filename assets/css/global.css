@@ -12,6 +12,7 @@ a{
 :root{
     /* Standard dimensions */
     --header-height: 13.6rem;
+    --main-dimension-img: 30.8rem;
     
     /* Main colors */
     --dark-tone: #9A7757;
@@ -250,9 +251,6 @@ nav ul li:hover{
 }
 
 .about-us-img{
-    background-image: url('../img/professionals.png');
-    background-size: 300%;
-    background-repeat: no-repeat;
     width: 30.8rem;
     height: 30.8rem;
     border: 0.8rem solid var(--dark-border);
@@ -276,6 +274,10 @@ nav ul li:hover{
     align-items: center;
     gap: 2.5rem;
     width: 30.8rem;
+    background-color: var(--medium-tone);
+    padding: 1rem;
+    box-sizing: content-box;
+    border-radius: 2rem;
 }
 
 .slider-container{
@@ -290,23 +292,6 @@ nav ul li:hover{
     align-items: center;
     gap: 2.5rem;
     animation: slider-auto 40s infinite ease-in-out;
-}
-
-#about-us-eronilde{
-    background-position: 38% 40%;
-}
-
-#about-us-tania{
-    background-position: 106% 58%;
-}
-
-#about-us-david{
-    background-position: 77% 32%;
-}
-
-#about-us-felipe{
-    background-position: 0% 33%;
-    background-size: 330%;
 }
 
 /* Animation definitions */
@@ -332,15 +317,15 @@ nav ul li:hover{
     border: 0.2rem solid var(--dark-border);
     border-radius: 1.8rem;
     width: 11rem;
-    height: 3.5rem;
+    height: 3rem;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 
 .slider-controls img{
-    width: 1.9rem;
-    height: 1.6rem;
+    width: 1.7rem;
+    height: 1.4rem;
     cursor: pointer;
 }
 
@@ -526,6 +511,56 @@ nav ul li:hover{
 
 
 /* Responsivity */
+
+/* Smaller mobiles */
+@media screen and (max-width: 375px){
+    section{
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+    
+    .home-img{
+        width: 25rem;
+        height: 25rem;
+    }
+
+    #home .main-container{
+        gap: 3.5rem;
+    }
+
+    #about-us-title{
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+    }
+
+    .slider, .slide-content{
+        width: 25rem;
+    }
+
+    .slide-content{
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        min-width: 25rem;
+        gap: 1.5rem;
+    }
+
+    .slide-content h2{
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    #about-us .main-container p{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+        padding: 0 1rem;
+    }
+
+    .about-us-img{
+        width: 22rem;
+        height: 22rem;
+    }
+
+}
 
 /* Tablets */
 @media screen and (min-width: 600px){
