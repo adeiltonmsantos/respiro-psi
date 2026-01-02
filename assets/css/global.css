@@ -471,64 +471,37 @@ nav ul li:hover{
 
 
 /* Contact section */
-#contact{
-    height: calc(100vh - 2 * var(--header-height));
+.contact-container{
+    width: 32.6rem;
+    height: 21.1rem;
+    background-image: url('../img/blank-note-landscape.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2rem;
+    align-items: center;
+    padding: 3rem 3rem 0 3rem;
 }
 
-#contact .main-container{
-    height: 40rem;
-    gap: 2rem;
+.contact-container img:nth-child(1){
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
 }
 
-.contact-container{
-    width: 27rem;
-    height: 22.7rem;
-    background-image: url('../img/note.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: flex-start;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.contact-container:hover{
-    transform: scale(1.1);
-}
-
-.contact-content{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-top: 2rem;
-    height: 15rem;
-}
-
-.contact-text{
-    font-family: 'Playpen Sans', sans-serif;
-    font-size: 1.6rem;
-    color: #000;
-    padding: 1rem 0.8rem;
-    line-height: 1.6rem;
-    text-align: center;
-}
-
-.brands-logos{
+.contact-data-container{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
 }
 
-.brands-logos img{
-    width: 3.8rem;
-    height: 3.8rem;
+.contact-data-container p{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
 }
-
 
 /* Responsivity */
 
