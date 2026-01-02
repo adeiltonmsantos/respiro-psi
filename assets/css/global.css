@@ -289,6 +289,7 @@ nav ul li:hover{
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
+    animation: slider-auto 40s infinite ease-in-out;
 }
 
 #about-us-eronilde{
@@ -306,6 +307,24 @@ nav ul li:hover{
 #about-us-felipe{
     background-position: 0% 33%;
     background-size: 330%;
+}
+
+/* Animation definitions */
+@keyframes slider-auto {
+    /* Slide 1 (0s a 10s) */
+    0%, 20% { transform: translateX(0%); }
+    
+    /* Transição para Slide 2 */
+    25%, 45% { transform: translateX(-100%); }
+    
+    /* Transição para Slide 3 */
+    50%, 70% { transform: translateX(-200%); }
+    
+    /* Transição para Slide 4 */
+    75%, 95% { transform: translateX(-300%); }
+    
+    /* Volta para o início de forma suave */
+    100% { transform: translateX(0%); }
 }
 
 .slider-controls{
