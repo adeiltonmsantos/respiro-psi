@@ -435,6 +435,10 @@ nav ul li:hover{
 }
 
 /* Key Differentiators section */
+#key-differentiators .main-container{
+    gap: 4rem
+}
+
 .key-differentiators-content{
     display: flex;
     flex-direction: column;
@@ -449,12 +453,14 @@ nav ul li:hover{
     align-items: center;
     text-align: center;
     line-height: 3.2rem;
-    background-color: #1D3358;
+    background-color: var(--dark-tone);
+    color: var(--lightness-tone);
     width: 34rem;
     height: 12rem;
     padding: 3rem 1.4rem;
     border-radius: 5rem 0 5rem 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 2.3rem;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
