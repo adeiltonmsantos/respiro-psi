@@ -227,7 +227,7 @@ nav ul li:hover{
     position: absolute;
     top: 3rem;
     right: 0;
-    background-color: #546A85;
+    background-color: var(--dark-tone);
     width: 22rem;
     display: none;
 }
@@ -252,6 +252,7 @@ nav ul li:hover{
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
+    background-color: var(--medium-tone);
 }
 
 .about-us-img{
@@ -278,48 +279,32 @@ nav ul li:hover{
     align-items: center;
     gap: 2.5rem;
     width: 30.8rem;
-    background-color: var(--medium-tone);
+    background-color: var(--light-tone);
     padding: 2rem 1rem 1rem;
-    /* box-sizing: content-box; */
+    border: 0.4rem solid var(--lightness-tone);
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .slider-container{
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     min-width: 30.8rem;
+    position: relative;
+    transition: transform 1.5s ease-in-out;
 }
 
-.slide-content{
+.slide{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
     min-width: 30.8rem;
-    animation: slider-auto 40s infinite ease-in-out;
 }
 
-.slide-content p{
+.slide p{
     padding: 1.5rem;
-}
-
-/* Animation definitions */
-@keyframes slider-auto {
-    /* Slide 1 (0s a 10s) */
-    0%, 20% { transform: translateX(0%); }
-    
-    /* Transição para Slide 2 */
-    25%, 45% { transform: translateX(-100%); }
-    
-    /* Transição para Slide 3 */
-    50%, 70% { transform: translateX(-200%); }
-    
-    /* Transição para Slide 4 */
-    75%, 95% { transform: translateX(-300%); }
-    
-    /* Volta para o início de forma suave */
-    100% { transform: translateX(0%); }
 }
 
 .slider-controls{
@@ -471,11 +456,19 @@ nav ul li:hover{
 
 
 /* Contact section */
+#contact{
+    background-color: var(--dark-tone);
+}
+
+#contact .main-container h1{
+    color: var(--lightness-tone);
+}
+
 .contact-container{
     width: 32.6rem;
     height: 21.1rem;
     background-image: url('../img/blank-note-landscape.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -524,12 +517,12 @@ nav ul li:hover{
         gap: 1.5rem;
     }
 
-    .slider, .slider-container, .slide-content{
+    .slider, .slider-container, .slide{
         width: 28rem;
         min-width: 28rem;
     }
 
-    .slide-content{
+    .slide{
         display: flex;
         flex-direction: column;
         width: 25rem;
@@ -537,7 +530,7 @@ nav ul li:hover{
         gap: 1.5rem;
     }
 
-    .slide-content h2{
+    .slide h2{
         font-size: 2rem;
         line-height: 2.2rem;
     }

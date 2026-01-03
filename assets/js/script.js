@@ -28,5 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Navigating to the clicked link
             window.location.href = url;
 
-        })});
+    })});
+
+    startSlider();
+
 });
