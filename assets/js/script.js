@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })});
 
+    // Initializing slider in About-us section
     startSlider();
 
 });

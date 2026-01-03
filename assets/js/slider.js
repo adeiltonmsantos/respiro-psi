@@ -16,7 +16,7 @@
 // </div>
 
 // The parameters are:
-// - sliderContainerClass: CSS class of the main slider container
+// - sliderContainerClass: CSS class of the slides container
 // - prevButtonClass: CSS class of the previous button
 // - nextButtonClass: CSS class of the next button
 // - transitiontime: Time in milliseconds for slide transition

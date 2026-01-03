@@ -163,24 +163,47 @@ header{
 
 /* Footer section */
 footer{
-    background: linear-gradient(90deg,#0E3E83 0%, #07192A 100%);
+    background: linear-gradient(90deg,var(--light-tone) 0%, var(--dark-tone) 100%);
 }        
 
+.logo-footer{
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 .logo-footer img{
-    width: 1.625rem;
-    height: 2.21rem;
+    width: 4rem;
 }
 
 .logo-footer p{
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-weight: bold;
-    line-height: 1.1rem;
+    line-height: 0.8rem;
     width: 6.305rem;
+    text-align: center;
+}
+
+.content-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .content-footer p{
-    width: 14rem;
-    line-height: 1.2rem;
+    width: 22rem;
+}
+
+.content-footer p:nth-child(1){
+    font-size: 1.8rem;
+}
+
+.content-footer p:nth-child(2){
+    font-size: 1.6rem;
+}
+
+.content-footer p:nth-child(3){
+    font-size: 1.3rem;
 }
 
 
@@ -292,7 +315,7 @@ nav ul li:hover{
     width: 100%;
     min-width: 30.8rem;
     position: relative;
-    transition: transform 1.5s ease-in-out;
+    /* transition: transform 1.5s ease-in-out; */
 }
 
 .slide{
