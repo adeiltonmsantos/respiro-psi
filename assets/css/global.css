@@ -174,7 +174,7 @@ footer{
 }
 
 .logo-footer img{
-    width: 4rem;
+    width: 7.1rem;
 }
 
 .logo-footer p{
@@ -193,6 +193,8 @@ footer{
 
 .content-footer p{
     width: 22rem;
+    font-weight: bold;
+    text-shadow: 0.2rem 0.2rem 0.4rem #000;
 }
 
 .content-footer p:nth-child(1){
@@ -281,8 +283,8 @@ nav ul li:hover{
 }
 
 .about-us-img{
-    width: 26rem;
-    height: 26rem;
+    width: 24rem;
+    height: 24rem;
     border: 0.3rem solid var(--dark-border);
     border-radius: 50%;
 }
@@ -595,10 +597,10 @@ nav ul li:hover{
         padding: 0 1rem;
     }
 
-    .about-us-img{
+    /* .about-us-img{
         width: 20rem;
         height: 20rem;
-    }
+    } */
 
 }
 
@@ -643,16 +645,14 @@ nav ul li:hover{
     }
 
     /* About-us section */
-    .about-us-img{
+    /* .about-us-img{
         width: 33rem;
         height: 33rem;
-        border: 0.8rem solid var(--dark-border);
-    }
+    } */
 
     .slider{
         width: 40rem;
         padding: 2rem 1rem 1rem;
-        border: 0.4rem solid var(--lightness-tone);
         border-radius: 2rem;
     }
 
@@ -720,7 +720,6 @@ nav ul li:hover{
     .slider{
         width: 50rem;
         padding: 2rem 1rem 1rem;
-        border: 0.4rem solid var(--lightness-tone);
         border-radius: 2rem;
         padding: 4rem;
     }
@@ -834,7 +833,6 @@ nav ul li:hover{
     .slider{
         width: 80rem;
         padding: 2rem 1rem 1rem;
-        border: 0.4rem solid var(--lightness-tone);
         border-radius: 2rem;
     }
 
@@ -858,10 +856,10 @@ nav ul li:hover{
         flex-direction: column;
     }
 
-    .about-us-img{
+    /* .about-us-img{
         width: 25rem;
         height: 25rem;
-    }
+    } */
 
     .slide p{
         padding: 1.5rem;
@@ -937,6 +935,8 @@ nav ul li:hover{
         position: absolute;
     }
     
-    
+    footer{
+        height: calc(var(--header-height) - 3rem);
+    }
 
 }
