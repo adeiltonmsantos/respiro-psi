@@ -424,7 +424,7 @@ nav ul li:hover{
 .skills-splash{
     width: 28.9rem;
     height: 28rem;
-    filter: opacity(0.65);
+    /* filter: opacity(0.65); */
 }
 
 .skills-grid-img :nth-child(1){
@@ -461,37 +461,6 @@ nav ul li:hover{
     align-items: center;
 }
 
-/* .skills-main-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-} */
-
-/* .skills-grid-img .skills-splash{
-    width: 28.9rem;
-    height: 28rem;
-} */
-
-/* .skill-description-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    width: 28.9rem;
-    height: 28rem;
-    padding: 0 1.5rem;
-    background-image: url('../img/cloud.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.skill-description-container img{
-    width: 28.9rem;
-    height: 28rem;
-    filter: opacity(0.65);
-} */
 
 /* Key Differentiators section */
 #key-differentiators .main-container{
@@ -522,10 +491,11 @@ nav ul li:hover{
     line-height: 2.3rem;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
+    box-shadow: 7px 7px 10px 2px #00000057;
 }
 
-.key-differentiator:hover{
-    transform: scale(1.1);
+.key-differentiators-content .key-differentiator:hover{
+    transform: scale(1.05);
 }
 
 .services-img,
@@ -540,40 +510,58 @@ nav ul li:hover{
     background-color: var(--dark-tone);
 }
 
+.main-contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 #contact .main-container h1{
     color: var(--lightness-tone);
 }
 
 .contact-container{
-    width: 32.6rem;
-    height: 21.1rem;
-    background-image: url('../img/blank-note-landscape.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    width: 27rem;
+    height: 17rem;
+    background-color: #f8ebaf;
+    border-radius: 1.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 3rem 3rem 0 3rem;
+    padding: 3rem;
+    box-shadow: 7px 7px 10px 2px #00000057;
+    transform: scale(1);
+    transition: transform 500ms ease-in-out ;
 }
 
-.contact-container img:nth-child(1){
-    width: 6rem;
-    height: 6rem;
+.contact-container:hover{
+    transform: scale(1.05);
+}
+
+.contact-container img{
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
 }
 
 .contact-data-container{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
 }
 
+.contact-data-container img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
 .contact-data-container p{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 /* Responsivity */
@@ -813,12 +801,13 @@ nav ul li:hover{
         grid-row-start: 3;
         grid-row-end: 4;
     }
-    
+
     .services-img{
         display: block;
         height: 100%;
         width: 100%;
         position: absolute;
+        pointer-events: none;
     }
     
     #selfcare{
@@ -840,7 +829,7 @@ nav ul li:hover{
     /* Contact section */
     .main-contact-container{
         display: grid;
-        gap: 1rem 2rem;
+        gap: 5rem;
         width: 100%;
         grid-template-columns: 1fr 1fr;
     }
@@ -916,6 +905,7 @@ nav ul li:hover{
 
     .slide{
         min-width: 80rem;
+        height: 31rem;
         flex-direction: row;
     }
 
@@ -940,65 +930,6 @@ nav ul li:hover{
     .skills-main-container .skills-splash{
         display: block;
     }
-
-    /* Key-differentiators section
-    .key-differentiators-content{
-        max-width: 900px;
-        display: grid;
-        gap: 0;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        height: 40rem;
-        position: relative;
-    }
-
-    .key-differentiator{
-        font-size: 1.7rem;
-        line-height: 2.2rem;
-        width: 27rem;
-    }
-
-    .key-differentiator:nth-child(1){
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-
-    .key-differentiator:nth-child(2){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .key-differentiator:nth-child(3){
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    
-    .services-img{
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
-    
-    #selfcare{
-        display: block;
-        width: 20rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
-    #wellcoming-service{
-        display: block;
-        width: 25rem;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-    } */
     
     footer{
         height: calc(var(--header-height) - 3rem);
